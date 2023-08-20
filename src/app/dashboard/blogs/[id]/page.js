@@ -1,6 +1,7 @@
 import React from 'react';
 
-const SingleBlog = () => {
+const SingleBlog = ({params}) => {
+    console.log(params.id)
     return (
         <div>
             <h2>Single Blog in dashboard</h2>
