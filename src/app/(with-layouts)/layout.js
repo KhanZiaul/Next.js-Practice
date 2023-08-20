@@ -1,3 +1,5 @@
+import Navigation from "@/components/Navigation/Navigation";
+
 export const metadata = {
   title: 'Dashboard | Practice NextJS',
   description: 'Practice NextJS',
@@ -6,10 +8,7 @@ export const metadata = {
 const layout = ({ children }) => {
   return (
     <div>
-      <nav className='flex gap-5 mb-4 mt-4'>
-        <a href="">Home</a>
-        <a href="">About</a>
-      </nav>
+      <Navigation></Navigation>
       {
         children
       }
