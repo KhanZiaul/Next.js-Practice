@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import Navigation from "@/components/Navigation/Navigation";
 
 export const metadata = {
@@ -12,9 +13,7 @@ const layout = ({ children }) => {
       {
         children
       }
-      <footer className='mt-5'>
-        This is footer
-      </footer>
+      <Footer></Footer>
     </div>
   );
 };
