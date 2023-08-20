@@ -4,7 +4,7 @@ const SingleBlog = ({params}) => {
     console.log(params.id)
     return (
         <div>
-            <h2>Single Blog in dashboard</h2>
+            <h2>Blog number {params.id}</h2>
         </div>
     );
 };

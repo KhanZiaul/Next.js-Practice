@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+    title: 'About | Dashboard | Practice NextJS',
+    description: 'Practice NextJS',
+  }
+
 const DashboardAbout = () => {
     return (
         <div>

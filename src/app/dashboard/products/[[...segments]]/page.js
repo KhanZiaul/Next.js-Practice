@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+    title: 'Products | Dashboard | Practice NextJS',
+    description: 'Practice NextJS',
+  }
+
 const DashboardProduct = ({params}) => {
     const [year , id] = params.segments || []
     return (
