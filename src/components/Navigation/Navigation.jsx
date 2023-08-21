@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import NavLink from '../NavLink/NavLink';
 
 const Navigation = () => {
     return (
@@ -8,9 +9,9 @@ const Navigation = () => {
                 <h2>NextJS Practice</h2>
             </div>
             <div className="flex gap-5">
-                <Link href="/">Home</Link>
-                <Link href="/about">About</Link>
-                <Link href="/dashboard">Dashboard</Link>
+                <NavLink href="/">Home</NavLink>
+                <NavLink href="/about">About</NavLink>
+                <NavLink href="/dashboard">Dashboard</NavLink>
             </div>
         </div>
     );
