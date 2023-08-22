@@ -9,9 +9,9 @@ const Navigation = () => {
                 <h2>NextJS Practice</h2>
             </div>
             <div className="flex gap-5">
-                <NavLink href="/">Home</NavLink>
-                <NavLink href="/about">About</NavLink>
-                <NavLink href="/dashboard">Dashboard</NavLink>
+                <NavLink exact={true} activeClassName="text-yellow-500" href="/">Home</NavLink>
+                <NavLink activeClassName="text-yellow-600" href="/about">About</NavLink>
+                <NavLink activeClassName="text-yellow-600" href="/dashboard">Dashboard</NavLink>
             </div>
         </div>
     );
