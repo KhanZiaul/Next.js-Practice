@@ -8,19 +8,19 @@ export const metadata = {
 
 const blogs = [
     {
-        title: "Blog 1",
+        title: "Blog1",
         id: 1
     },
     {
-        title: "Blog 2",
+        title: "Blog2",
         id: 2
     },
     {
-        title: "Blog 3",
+        title: "Blog3",
         id: 3
     },
     {
-        title: "Blog 4",
+        title: "Blog4",
         id: 4
     }
 ]
@@ -33,7 +33,12 @@ const DashboardBlogs = () => {
                 {
                     blogs.map((blog) => {
                         return (
-                            <Link href={`/dashboard/blogs/${blog.id}`} className='border-2 p-5 cursor-pointer' key={blog.id}>{blog.title}</Link>
+                            <Link href={{
+                                pathname:`/dashboard/blogs/${blog.id}`,
+                                query:{
+                                    title : blog.title
+                                },
+                            }} className='border-2 p-5 cursor-pointer' key={blog.id}>{blog.title}</Link>
                         )
                     })
                 }
