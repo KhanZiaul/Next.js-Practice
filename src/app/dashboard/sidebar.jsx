@@ -1,17 +1,41 @@
+import NavLink from '@/components/NavLink/NavLink';
 import Link from 'next/link';
 import React from 'react';
 
 const Sidebar = () => {
+
+    const routes = [
+        {
+            pathName: "Blogs",
+            href: "/dashboard/blogs"
+        },
+        {
+            pathName: "Classes",
+            href: "/dashboard/classes"
+        },
+        {
+            pathName: "About",
+            href: "/dashboard/dashboardAbout"
+        },
+        {
+            pathName: "Products",
+            href: "/dashboard/products"
+        },
+    ]
+
     return (
         <aside className='bg-sky-700 text-white font-semibold p-5 w-[400px] h-[100vh]'>
             <h2 className='text-3xl text-center pt-4'>Dashboard</h2>
             <div className='flex flex-col gap-5 mt-8'>
-                <Link href="/dashboard/blogs">Blogs</Link>
-                <Link href="/dashboard/classes">Classes</Link>
-                <Link href="/dashboard/dashboardAbout">About</Link>
-                <Link href="/dashboard/products">Products</Link>
+                {
+                    routes.map((route) => {
+                        return (
+                            <NavLink key={route.pathName} activeClassName="text-yellow-500" href={route.href}>{route.pathName}</NavLink>
+                        )
+                    })
+                }
                 <hr />
-                <Link href="/">Home</Link>
+                <NavLink href="/" exact={true} activeClassName="text-yellow-500" >Home</NavLink>
             </div>
         </aside>
     );
